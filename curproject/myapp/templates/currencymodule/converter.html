@@ -1,0 +1,36 @@
+{% extends 'layouts/base.html' %}
+
+
+
+{% block content %}
+<label for="currency"> currency: </label>
+<select id="currency" name="currency">
+
+    <option> Dollar </option>
+    <option> Emirates Dirham </option>
+    <option> Qatari Riyal	</option>
+    <option> Chinese Yuan	</option>
+    <option> Euro	</option>
+    <option> Iraqi Dinar	</option>
+    <option>Hong Kong Dolla		</option>
+    <option> Egyptian Poun	</option>
+    <option> Japanese Yen	</option>
+    <option> Korean won </option>
+    <option> Kuwaiti Dinar</option>
+    <option> Bahraini Dinar</option>
+    </select>
+    <br>
+    <label for="currency"> input currency </label><br>
+    <input id="input currency" value="1.00">
+
+    <br>
+
+    <label for="currency"> output currency </label><br>
+    <input id="output currency" value="0.27">
+
+    <br>
+
+    <input type="submit" value="convert">
+
+
+{% endblock %}

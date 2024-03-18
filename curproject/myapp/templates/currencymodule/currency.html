@@ -2,59 +2,29 @@
 {% block stylesheets %}
 <style>
     .center-table {
-        text-align: center;
+    text-align: center;
     }
-   table, th, td {
-   border: 1px solid black;
-   border-collapse: collapse;
-   }
+    table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    }
 </style>
 {% endblock stylesheets %}
 {% block content %}
+<caption>Currency exchange from into Riyal another</caption>
+<table>
+    <tr>
+        <th colspan="2">ONE Riyal</th>
+    </tr>
+</tr>
+{% for currency in curr %}
+<tr>
+    <td><b>{{ currency.currency }}</b></td>
+    <td>{{ currency.value }}</td>
+</tr>
+{% endfor %}
 
-
-    <caption>Currency exchange from into Riyal another</caption>
-   <table>
-     
-      <tr>
-         <th colspan="4">ONE Riyal</th>
-      </tr>
-      <tr>
-         <td><b>Dollar</b></td>
-         <td>0.27</td>
-         <td><b>Emirates Dirham</b></td>
-         <td>0.98</td>
-      </tr>
-      <tr>
-         <td><b>Qatari Riyal</b></td>
-         <td>0.97</td>
-         <td> <b>Chinese Yuan</b></td>
-         <td>1.91</td>
-      </tr>
-      <tr>
-         <td><b>Euro</b></td>
-         <td>0.24</td>
-         <td><b>Iraqi Dinar<b></td>
-         <td>349.50</td>
-      </tr>
-      <tr>
-         <td><b>Hong Kong Dollar</b></td>
-         <td>2.09</td>
-         <td><b>Egyptian Pound<b></td>
-         <td>13.06</td>
-      </tr>
-      <tr>
-         <td><b>Japanese Yen</b></td>
-         <td>39.29</td>
-         <td><b>Korean won<b></td>
-         <td>349.10</td>
-      </tr>
-      <tr>
-         <td><b>Kuwaiti Dinar</b></td>
-         <td>0.082</td>
-         <td><b>Bahraini Dinar<b></td>
-         <td>0.10</td>
-      </tr>
-   </table>
+   
+</table>
 
 {% endblock %}
