@@ -9,18 +9,18 @@ def currency(request):
 
 def exchanges():
     currency=[]
-    C1 = {'currency':'Dollar', 'value':0.27}
-    C2 = {'currency':'Emirates Dirham', 'value':0.98}
-    C3 = {'currency':'Qatari Riyal', 'value':0.97}
-    C4 = {'currency':'Chinese Yuan', 'value':1.91}
-    C5 = {'currency':'Euro', 'value':0.24}
-    C6 = {'currency':'Iraqi Dinar', 'value':349.50}
-    C7 = {'currency':'Hong Kong Dolla', 'value':2.09}
-    C8 = {'currency':'Egyptian Poun', 'value':13.06}
-    C9 = {'currency':'Japanese Yen', 'value':39.29}
-    C10 = {'currency':'Korean won', 'value':349.10}
-    C11 = {'currency':'Kuwaiti Dinar', 'value':0.082}
-    C12 = {'currency':'Bahraini_Dinar', 'value':0.10}
+    C1 = {'currency':'Dollar',"Symbol":"$", 'value':0.27}
+    C2 = {'currency':'Emirates Dirham',"Symbol":"د.إ", 'value':0.98}
+    C3 = {'currency':'Qatari Riyal',"Symbol":"﷼", 'value':0.97}
+    C4 = {'currency':'Chinese Yuan',"Symbol":"¥", 'value':1.91}
+    C5 = {'currency':'Euro',"Symbol":"€", 'value':0.24}
+    C6 = {'currency':'Iraqi Dinar',"Symbol":"د.ع", 'value':349.50}
+    C7 = {'currency':'Turkish lira',"Symbol":"TL", 'value':8.58}
+    C8 = {'currency':'Egyptian Pound',"Symbol":"£", 'value':13.06}
+    C9 = {'currency':'Japanese Yen',"Symbol":"¥", 'value':39.29}
+    C10 = {'currency':'Korean won',"Symbol":"₩", 'value':349.10}
+    C11 = {'currency':'Kuwaiti Dinar',"Symbol":"ك", 'value':0.082}
+    C12 = {'currency':'Bahraini_Dinar',"Symbol":"BD", 'value':0.10}
 
     currency.append(C1)
     currency.append(C2)

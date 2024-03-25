@@ -11,16 +11,25 @@
 </style>
 {% endblock stylesheets %}
 {% block content %}
-<caption>Currency exchange from into Riyal another</caption>
+<caption>Currency exchange from into Riyal another:</caption>
+
 <table>
     <tr>
-        <th colspan="2">ONE Riyal</th>
+        <th colspan="3">ONE Riyal</th>
     </tr>
-</tr>
+
+    <tr>
+        <td><b>currency</b></td>
+        <td><b>value</b></td>
+        <td><b>Symbol</b></td>
+    </tr>
+
 {% for currency in curr %}
 <tr>
     <td><b>{{ currency.currency }}</b></td>
     <td>{{ currency.value }}</td>
+    <td>{{ currency.Symbol }}</td>
+
 </tr>
 {% endfor %}
 

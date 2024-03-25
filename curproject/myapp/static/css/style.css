@@ -1,4 +1,83 @@
-body {
-    background-color: #44b1a6; /* Change this to the desired color */
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Lobster&display=swap');
+
+
+  
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Comic Neue", cursive;
+    font-style: normal;
+   
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: relative;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
     text-align: center;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #ffffff00;
+    overflow: hidden;
+   
+}
+
+.navbar a {
+    font-family: "Lobster", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    -webkit-text-stroke: 0.6px #021736fd;
+    color: transparent;
+}
+
+.navbar a.active {
+    background-color: #66666600;
+}
+
+
+.background-clip {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+@media (min-aspect-ratio:16/9) {
+    .background-clip {
+        width: 100%;
+        height: auto;
+    }
+
+}
+
+@media (max-aspect-ratio:16/9) {
+    .background-clip {
+        width: auto;
+        height: 100%;
+    }
+
 }
