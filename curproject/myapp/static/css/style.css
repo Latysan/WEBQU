@@ -26,7 +26,10 @@
 
 .content {
     text-align: center;
+    margin: 0 auto; /* Add this line to center the content */
+    max-width: 600px; /* Adjust the maximum width as per your design */
 }
+
 
 .navbar {
     position: fixed;
@@ -42,7 +45,8 @@
     font-weight: 400;
     font-style: normal;
     float: left;
-    display: block;
+    display: 
+    block;
     color: white;
     text-align: center;
     padding: 14px 20px;
