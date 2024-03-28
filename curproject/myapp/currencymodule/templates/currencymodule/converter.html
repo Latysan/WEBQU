@@ -1,0 +1,23 @@
+{% extends 'layouts/base.html' %}
+{% block content %}
+<div class="content">
+	<form method="post">
+		{% csrf_token %}
+		<label for="Currency"> currency: </label>
+		<select id="currency" name="currency">
+			<option selected disabled=true>--Select Currency--</option>
+			{% for currency in infos %}
+			<option>{{ currency.curr }} </option>
+			{% endfor %}
+		</select>
+		<br>
+		<label for="currency"> input currency </label><br>
+		<input type="numeric" value="1.00">
+		<br>
+		<label for="currency"> output currency </label><br>
+		<input type="numeric" value="0.27">
+		<br>
+		<button type="submit" style="background-color:#d5e7e6;border-radius:5px;color:#0a062c;display:inline-block;font-size: 8px; font-family: monospace;font-weight:bold;line-height:15px;text-align:center;text-decoration:none;width:35px;-webkit-text-size-adjust:none;">convert</button>
+	</form>
+</div>
+{% endblock %}

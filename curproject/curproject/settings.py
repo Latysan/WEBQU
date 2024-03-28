@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-     'myapp',
+     'myapp.currencymodule',
 ]
 
 MIDDLEWARE = [
@@ -132,5 +132,6 @@ MEDIA_URL  = '/images/'
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'myapp/static'),  # Default static directory
-    ]
-#DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+     'C:/Users/Lenovo/Desktop/Myweb/WEBQU/curproject/myapp/static',  # Additional static directory
+]
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
