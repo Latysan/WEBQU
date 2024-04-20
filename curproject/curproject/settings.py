@@ -132,6 +132,5 @@ MEDIA_URL  = '/images/'
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'myapp/static'),  # Default static directory
-     'C:/Users/Lenovo/Desktop/Myweb/WEBQU/curproject/myapp/static',  # Additional static directory
 ]
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

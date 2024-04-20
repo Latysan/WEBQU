@@ -30,6 +30,69 @@
 }
 
 
+.content h3 {
+    font-family: "Comic Neue", cursive;
+    font-style: normal;
+    font-size: 23px;
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-weight: 200px;
+    transition: 0.5s;
+}
+
+.content h3:hover {
+    -webkit-text-stroke: 0.2px #fff;
+    color: transparent;
+}
+
+.content h5 {
+
+    font-family: "Comic Neue", cursive;
+    font-style: normal;
+    font-size: 15px;
+    color: #fff;
+    margin-bottom: 30px;
+    transition: 0.5s;
+}
+
+.content h5:hover {
+    -webkit-text-stroke: 0.1px #ffffff;
+    color: transparent;
+}
+
+
+.content p {
+
+    font-family: "Comic Neue", cursive;
+    font-style: normal;
+    font-size: 15px;
+    color: #fff;
+    margin-bottom: 30px;
+    transition: 0.5s;
+}
+
+.content a {
+    font-family: "Comic Neue", cursive;
+    font-style: normal;
+    font-size: 13px;
+    color: #fff;
+    display: inline-block;
+    text-decoration: none;
+    border: 2px solid #fff;
+    padding: 15px 25px;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+a:hover {
+   
+    background-color: #fff;
+    color: #000;
+}
+
+
+
+
 .navbar {
     position: fixed;
     top: 0;

@@ -1,9 +1,13 @@
+from itertools import count
 from django.shortcuts import render
 from .models import currency_table
+from django.db.models import Q
+from django.db.models import Count
+
 
 
 def index(request):
-    return render(request,'currencymodule/welcome.html') 
+    return render(request,'currencyModule/welcome.html') 
 
 def currency(request):
     
@@ -12,10 +16,12 @@ def currency(request):
      if request.method == "POST":
         selected_currency = request.POST.get('curr')
         filtered_currencies =currency_table.objects.filter(curr=selected_currency)
-        return render(request, 'currencymodule/exchange.html', {'infos': filtered_currencies}) 
+        return render(request, 'currencyModule/exchange.html', {'infos': filtered_currencies}) 
      else:
-        display = currency_table.objects.all().order_by('value')
-        return render(request, 'currencymodule/exchange.html', {'infos': display})
+        display = currency_table.objects.annotate(total_value=Count('value', filter=Q(value__gte=1)))
+        
+       # display = currency_table.objects.all().order_by('value')
+        return render(request, 'currencyModule/exchange.html', {'infos': display})
 
     
     
@@ -27,3 +33,4 @@ def converter(request):
 
     
   
+#filtered_objects = currency_table.objects.filter(Q(value__gte=1))
