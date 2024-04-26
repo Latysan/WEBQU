@@ -1,23 +1,52 @@
 {% extends 'layouts/base.html' %}
+
+		{% block title %} Converter {% endblock %}
+
+
 {% block content %}
+
 <div class="content">
-	<form method="post">
-		{% csrf_token %}
-		<label for="Currency"> currency: </label>
-		<select id="currency" name="currency">
-			<option selected disabled=true>--Select Currency--</option>
-			{% for currency in infos %}
-			<option>{{ currency.curr }} </option>
-			{% endfor %}
-		</select>
-		<br>
-		<label for="currency"> input currency </label><br>
-		<input type="numeric" value="1.00">
-		<br>
-		<label for="currency"> output currency </label><br>
-		<input type="numeric" value="0.27">
-		<br>
-		<button type="submit" style="background-color:#d5e7e6;border-radius:5px;color:#0a062c;display:inline-block;font-size: 8px; font-family: monospace;font-weight:bold;line-height:15px;text-align:center;text-decoration:none;width:35px;-webkit-text-size-adjust:none;">convert</button>
-	</form>
+    <div class="widget-box ">
+        <form method="post">
+            {% csrf_token %}
+            <label >Currency:</label>
+            <select id="currency_input" class="input-field" name="currency">
+                <option selected >--Select Currency--</option>
+                <option>USD</option>
+                <option>AED</option>
+                <option>SAR</option>
+                <option>EGP</option>
+                <option>EUR</option>
+            </select>
+
+            <label for="input-currency">Input currency:</label>
+            <input type="number" id="input-currency" class="input-field" value="1.00">
+
+        </form>
+    </div>
+
+    <div class="circle-button">
+        <button class="convert-button" id="swap" type="submit">SW</button>
+    </div>
+
+
+    <div class="widget-box ">
+        <form method="post">
+            {% csrf_token %}
+            <label for=>Currency:</label>
+            <select id="currency_output" class="output-field" name="currency">
+                <option selected >--Select Currency--</option>
+                <option>USD</option>
+                <option>AED</option>
+                <option>SAR</option>
+                <option>EGP</option>
+                <option>EUR</option>
+            </select>
+
+            <label for="output-currency">Output currency:</label>
+            <output id="output-currency" class="output-field"  >1.00 </output>
+        </form>
+    </div>
 </div>
+
 {% endblock %}

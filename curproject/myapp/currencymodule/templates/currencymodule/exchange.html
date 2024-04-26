@@ -1,20 +1,11 @@
 {% extends 'layouts/base.html' %}
-{% block stylesheets %}
-<style>
-	.center-table {
-	text-align: center;
-	}
-	table, th, td {
-	border: 1px solid black;
-	border-collapse: collapse;
-	}
-</style>
-{% endblock stylesheets %}
+{% block title %} Exchange {% endblock %}
+
 {% block content %}
 <form method="post">
 	{% csrf_token %}
 	<div class="content">
-		<label for="selected_currency"> currency: </label>
+		<label > currency: </label>
 		<select name="curr">
 			<option selected disabled=true>--Select Currency--</option>
 			<option> Dollar </option>
@@ -23,12 +14,12 @@
 			<option> Chinese Yuan	</option>
 			<option> Euro	</option>
 			<option> Iraqi Dinar	</option>
-			<option>Hong Kong Dolla		</option>
-			<option> Egyptian Poun	</option>
+			<option>Hong Kong Dollar		</option>
+			<option> Egyptian Pound	</option>
 			<option> Japanese Yen	</option>
 			<option> Korean won </option>
 			<option> Kuwaiti Dinar</option>
-			<option> Bahraini Dinar</option>
+			<option> Bahraini Dinar	</option>
 		</select>
 		<button type="submit" style="background-color:#d5e7e6;border-radius:5px;color:#0a062c;display:inline-block;font-size: 8px; font-family: monospace;font-weight:bold;line-height:15px;text-align:center;text-decoration:none;width:35px;-webkit-text-size-adjust:none;">find</button>
 </form>
@@ -54,7 +45,7 @@
 <td>{{ currency.Symbol }}</td>
 <td>{{ currency.value }}</td>
 <td>{{ currency.curr_S }}</td>
-<td>{{ currency.total_value }}</td> 
+<td>{{ currency.total_value }}</td>
 
 </tr>
 {% endfor %}
