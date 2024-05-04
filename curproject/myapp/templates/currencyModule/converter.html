@@ -1,0 +1,24 @@
+{% extends 'layouts/base.html' %}
+{% block title %} Converter {% endblock %}
+
+{% block content %}
+<div class="content">
+    <div class="widget-box ">
+        <form method="post">
+            {% csrf_token %}
+            {{ input_form }}
+        </form>
+    </div>
+
+    <div class="circle-button">
+        <button class="convert-button" id="swap" type="submit">SWAP</button>
+    </div>
+
+    <div class="widget-box ">
+        <form method="post">
+            {% csrf_token %}
+            {{ output_form }}
+        </form>
+    </div>
+</div>
+{% endblock %}

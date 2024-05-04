@@ -3,6 +3,8 @@ from django.shortcuts import render
 from .models import currency_table
 from django.db.models import Q
 from django.db.models import Count
+from .forms import InputForm, OutputForm
+
 
 
 
@@ -14,7 +16,7 @@ def currency(request):
      
     
      if request.method == "POST":
-        selected_currency = request.POST.get('curr')
+        selected_currency = request.POST.get('options')
         filtered_currencies =currency_table.objects.filter(curr=selected_currency)
         return render(request, 'currencyModule/exchange.html', {'infos': filtered_currencies}) 
      else:
@@ -23,13 +25,15 @@ def currency(request):
        # display = currency_table.objects.all().order_by('value')
         return render(request, 'currencyModule/exchange.html', {'infos': display})
 
-    
-    
+
+
 
 
 def converter(request):
-    display=currency_table.objects.all()
-    return render(request,'currencymodule/converter.html', {'infos': display}) 
+
+        input_form = InputForm()
+        output_form = OutputForm()
+        return render(request, 'currencymodule/converter.html', {'input_form': input_form, 'output_form': output_form})
 
     
   
